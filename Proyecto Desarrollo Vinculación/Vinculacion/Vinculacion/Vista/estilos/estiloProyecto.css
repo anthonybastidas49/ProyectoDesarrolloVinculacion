@@ -1,0 +1,41 @@
+﻿body {
+}
+.listas {
+    align-content:center;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 14pt;
+    font-style: oblique;
+    font-style: normal;
+    color:#001a7f
+}
+.texto {
+    align-content: center;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 14pt;
+    font-style: oblique;
+    font-style: normal;
+    color: #001a7f
+}
+.estiloLista {
+    align-content: center;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    align-content:center;
+    font-size: 18pt;
+    font-style: oblique;
+    font-style: normal;
+    color: #001a7f;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #fca585;
+    perspective: 800px;
+   
+}
+

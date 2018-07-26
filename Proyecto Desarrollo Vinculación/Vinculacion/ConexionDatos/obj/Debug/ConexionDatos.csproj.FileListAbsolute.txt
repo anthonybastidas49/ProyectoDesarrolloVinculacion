@@ -1,0 +1,7 @@
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.csprojAssemblyReference.cache
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Anthony\Desktop\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.pdb

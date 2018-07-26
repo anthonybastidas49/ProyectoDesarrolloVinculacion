@@ -1,0 +1,41 @@
+﻿body {
+    background-color: #ded8d8;
+}
+
+#tablaHorizontal {
+    opacity: 0.8;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #c3c3c3;
+    box-shadow: 10px 10px 10px #000;
+}
+
+#tablaMedio1 {
+    opacity: 0.8;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #c3c3c3;
+    box-shadow: 10px 10px 10px #000;
+}
+
+#lineaVertical {
+    opacity:0.8;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #808080 ;
+    box-shadow: 10px 10px 10px #000;
+}
+#lineaVertical3 {
+    opacity: 0.8;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#tituloEspe {
+    opacity:0.8;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+}
+#gmail{
+    height: 25px;
+    width: 100px;
+}
+

@@ -1,0 +1,54 @@
+﻿body {
+}
+.text {
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 20pt;
+    font-style: oblique;
+    font-style: normal;
+}
+.diseñoTabla {
+    font-family: 'Times New Roman';
+    font-size: 12pt;
+    color: beige;
+    border-radius: 20px 20px 20px 20px;
+}
+.estiloTablaMenu {
+    font-family: 'Times New Roman';
+    font-size: 14pt;
+    color: beige;
+    border-radius: 20px 20px 20px 20px;
+    background: #045521;
+}
+.scrolling-table-container {
+    height: 378px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+a:hover {
+    color: #000a7c;
+    text-decoration: underline;
+}
+a{
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: #000000;
+    font-style: normal;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+.tdMenu {
+    /*background-color: #3446ff;*/
+    border-radius: 20px 20px 20px 20px;
+    font-family: 'Times New Roman';
+    font-size: 14pt;
+}
+/*#divDatos {
+    border-top-color: #CC0000;
+    border-right-color: blue;
+    border-bottom-color: #00FF00;
+    border-left-color: #CCC;
+}*/

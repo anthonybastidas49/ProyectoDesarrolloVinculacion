@@ -1,0 +1,21 @@
+﻿body {
+}
+.texto {
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 16pt;
+    font-style: oblique;
+    font-style: normal;
+    border-color:#000000;
+}
+table {
+    border-collapse: separate;
+}
+.tbody
+
+{
+    background: blue;
+}
+

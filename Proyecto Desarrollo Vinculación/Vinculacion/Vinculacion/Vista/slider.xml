@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Imagenes/1.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl >~/Imagenes/2.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl >~/Imagenes/4.jpg</ImageUrl>
+  </Ad>
+<Ad>
+    <ImageUrl >~/Imagenes/5.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl >~/Imagenes/6.png</ImageUrl>
+  </Ad>
+</Advertisements>

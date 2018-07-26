@@ -1,0 +1,89 @@
+﻿body {
+    
+}
+#login {
+    background-color: #7fa4e5;
+}
+.estiloTablaMenu {
+    font-family: 'Times New Roman';
+    font-size: 24pt;
+    color: #d15050;
+    border-radius: 20px 20px 20px 20px;
+}
+#menu1 {
+    border-radius: 20px 20px 20px 20px;
+}
+#menu2 {
+    border-radius: 20px 20px 20px 20px;
+}
+#menu2 {
+    border-radius: 20px 20px 20px 20px;
+}
+#menu3 {
+    border-radius: 20px 20px 20px 20px;
+}
+#menu4 {
+    border-radius: 20px 20px 20px 20px;
+}
+#menu5 {
+    border-radius: 20px 20px 20px 20px;
+}
+#menu6 {
+    border-radius: 20px 20px 20px 20px;
+}
+.texto{
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 14pt;
+    font-style: oblique;
+    font-style: normal;
+}
+h3 {
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 18pt;
+    font-style: oblique;
+    font-style: normal;
+}
+h3:hover{
+    background-color:cornflowerblue;
+}
+#menuColumna {
+    align-content: center;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #555454;
+}
+#imagenes {
+    align-content: center;
+    text-align: center;
+}
+a {
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: #000000;
+    font-style: normal;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+a:hover {
+        color: #000a7c;
+        text-decoration: underline;
+ }
+a {
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: #000000;
+    font-style: normal;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+.linkSobre {
+        color: #000a7c;
+        text-decoration: underline;
+    }
+
