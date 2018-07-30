@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Conexion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -54,6 +53,8 @@
     </Compile>
     <Compile Include="Model\Estudiante.cs" />
     <Compile Include="Model\EstudianteDAO.cs" />
+    <Compile Include="Model\Formato.cs" />
+    <Compile Include="Model\FormatoDAO.cs" />
     <Compile Include="Model\Maestro.cs" />
     <Compile Include="Model\MaestroDAO.cs" />
     <Compile Include="Model\Persona.cs" />

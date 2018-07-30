@@ -12,3 +12,10 @@ D:\Espe\5 QuintoSemestre\Desarrollo\Proyecto Desarrollo Vinculación\Vinculacion
 D:\Espe\5 QuintoSemestre\Desarrollo\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\scripts.csproj.CoreCompileInputs.cache
 D:\Espe\5 QuintoSemestre\Desarrollo\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.dll
 D:\Espe\5 QuintoSemestre\Desarrollo\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.pdb
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\ConexionDatos.dll
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\ConexionDatos.pdb
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\scripts.csprojAssemblyReference.cache
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\scripts.csproj.CoreCompileInputs.cache
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.dll
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.pdb

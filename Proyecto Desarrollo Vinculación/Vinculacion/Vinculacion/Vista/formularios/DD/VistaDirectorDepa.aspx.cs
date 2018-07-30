@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
 {
      int idMaestro;
-      String carrera;
+     String carrera;
     SolicitudDAO solicitud = new SolicitudDAO();
     PersonaDAO persona = new PersonaDAO();
     List<Solicitud> listaS = new List<Solicitud>();

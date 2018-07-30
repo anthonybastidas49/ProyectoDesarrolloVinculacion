@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConexionDatos
 {
-    public class Class1
+    class FormatoDAO
     {
     }
 }

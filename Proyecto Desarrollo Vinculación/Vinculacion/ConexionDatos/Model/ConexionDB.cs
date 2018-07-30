@@ -14,7 +14,7 @@ namespace ConexionDatos
         {
             conectar = new SqlConnection(Configuracion.Default.cadena);
             conectar.Open();
-           
+            
         }
         public void desconectar()
         {

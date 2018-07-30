@@ -133,7 +133,7 @@
                     © Copyright ESPE EDU. ® Todos los derechos reservados 2018
                 </td>
                 <td>
-                    <a href="indexVinculacion.aspx"><asp:Image  runat="server" ImageAlign="Left" ImageUrl="~/Imagenes/home.png" ToolTip="index" Height="65px" Width="80px" /></a>
+                    <a href="../indexVinculacion.aspx"><asp:Image  runat="server" ImageAlign="Left" ImageUrl="~/Imagenes/home.png" ToolTip="index" Height="65px" Width="80px" /></a>
                 </td>
             </tr>
         </table>

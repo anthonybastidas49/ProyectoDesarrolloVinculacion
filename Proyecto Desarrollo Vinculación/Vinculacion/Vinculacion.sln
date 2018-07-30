@@ -28,6 +28,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Vinculacion", "Vinculacion\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scripts", "ConexionDatos\scripts.csproj", "{D22CF06A-CBF0-4037-9CD1-C1CF8A690000}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web.test", "web.test\web.test.csproj", "{643C43A8-7855-4C45-BBE4-E7FCFAE22BFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{D22CF06A-CBF0-4037-9CD1-C1CF8A690000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D22CF06A-CBF0-4037-9CD1-C1CF8A690000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D22CF06A-CBF0-4037-9CD1-C1CF8A690000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643C43A8-7855-4C45-BBE4-E7FCFAE22BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643C43A8-7855-4C45-BBE4-E7FCFAE22BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643C43A8-7855-4C45-BBE4-E7FCFAE22BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643C43A8-7855-4C45-BBE4-E7FCFAE22BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -58,6 +58,13 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
                                     Session["carrera"] = Convert.ToString(read[4]);
                                     Response.Redirect("../formularios/DD/vistaDirectorDepa.aspx");
                                     break;
+                                case "CV":
+                                    Session["idPersona"] = Convert.ToString(read[2]);
+                                    Session["nombre"] = Convert.ToString(read[0]);
+                                    Session["apellido"] = Convert.ToString(read[3]);
+                                    Session["carrera"] = Convert.ToString(read[4]);
+                                    Response.Redirect("../formularios/CV/ActualizarFormatos.aspx");
+                                    break;
                                 default:
                                     break;
                                
