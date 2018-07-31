@@ -74,14 +74,22 @@ public partial class Vista_formularios_CV_ActualizarFormatos : System.Web.UI.Pag
         }
         else
         {
-            Formato auxiliarDescarga= consultasFormato.retorno(Convert.ToInt16(lblId.Text));
-            byte[] archivo = auxiliarDescarga.Documento;
-            Response.Clear();
+            if (vistaDocumentos.SelectedRow.Cells[3].Text.Equals("&nbsp;"))
+            {
+                Response.Write("<script type='text/javascript'> alert('FORMATO EN MANTENIMIENTO') </script>");
+            }
+            else
+            {
+                Formato auxiliarDescarga = consultasFormato.retorno(Convert.ToInt16(lblId.Text));
+                byte[] archivo = auxiliarDescarga.Documento;
+                Response.Clear();
+
+                Response.AddHeader("content-disposition", string.Format("attachment;filename={0}", "" + auxiliarDescarga.nomFormato + "." + auxiliarDescarga.Extension + ""));
+                Response.ContentType = "application/octet-stream";
+                Response.BinaryWrite(archivo);
+                Response.End();
+            }
             
-            Response.AddHeader("content-disposition", string.Format("attachment;filename={0}", "" + auxiliarDescarga.nomFormato + "." + auxiliarDescarga.Extension + ""));
-            Response.ContentType = "application/octet-stream";
-            Response.BinaryWrite(archivo);
-            Response.End();
         }
         
     }

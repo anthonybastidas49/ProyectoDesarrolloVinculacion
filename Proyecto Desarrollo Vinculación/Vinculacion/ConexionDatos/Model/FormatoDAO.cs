@@ -22,7 +22,7 @@ namespace ConexionDatos.Model
             {
                 while (reader.Read())
                 {
-                    Formato formato = new Formato(Convert.ToInt16(reader[0]), Convert.ToString(reader[1])   );
+                    Formato formato = new Formato(Convert.ToInt16(reader[0]), Convert.ToString(reader[1]),Convert.ToString(reader[3]));
                     listaFormato.Add(formato);
                 }
             }
@@ -65,10 +65,11 @@ namespace ConexionDatos.Model
            
             if (reader.Read())
             {
-                byte[] documento = (byte[])reader[2];
-                Formato retornar = new Formato(Convert.ToInt16(reader[0]), Convert.ToString(reader[1]),
-                    documento, Convert.ToString(reader[3]));
-                return retornar;
+                    byte[] documento = (byte[])reader[2];
+                    Formato retornar = new Formato(Convert.ToInt16(reader[0]), Convert.ToString(reader[1]),
+                        documento, Convert.ToString(reader[3]));
+                    return retornar;
+                
             }
             else
                 return null;

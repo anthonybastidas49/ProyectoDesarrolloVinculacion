@@ -102,13 +102,9 @@
                                 <td class="auto-style14" >
                                     <a href="ActualizarFormatos.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/Formato.png" Width="138px" /></a>
                                 </td>
-                                <td>
-                                    <a href="VistaDirectorDepaMaestros.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/maestrosVincular.png" Width="162px" /></a>
+                                <td> 
                                 </td>
                                 <td>
-
-                                    <a href="VistaDirectorDepaAsignar.aspx"><asp:Image ID="Image5" runat="server" Height="112px" ImageUrl="~/Imagenes/tutorAcademico.png" Width="180px" /></a>
-
                                 </td>
                             </tr>
                         </table>

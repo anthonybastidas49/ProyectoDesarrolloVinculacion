@@ -37,6 +37,11 @@ namespace ConexionDatos.Model
             Extension = extension;
         }
 
+        public Formato(int idFormato, string nomFormato, string extension) : this(idFormato, nomFormato)
+        {
+            Extension = extension;
+        }
+
         public byte[] retorno(int id)
         {
             ConexionDB c = new ConexionDB();

@@ -22,7 +22,7 @@
                 <a href="inforProyectos.aspx"><h3 >PROYECTOS ACTIVOS</h3></a>
             </td>
             <td id="menu4"style="text-align:center;">
-               <a href="loginVinculacion.aspx"> <h3 >FORMATOS</h3></a>
+               <a href="Formatos.aspx"> <h3 >FORMATOS</h3></a>
             </td>
             <td id="menu5"style="text-align:center;">
                <a href="acercaDE.aspx"> <h3 >ACERCA DE</h3></a>
