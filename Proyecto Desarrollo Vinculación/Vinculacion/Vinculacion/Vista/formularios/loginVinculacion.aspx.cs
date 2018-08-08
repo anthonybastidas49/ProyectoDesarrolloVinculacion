@@ -30,7 +30,7 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
             {
                 if (rbM.Checked.Equals(true))
                 {
-                    query = @"SELECT P.NOMBREPERSONA,M.CARGO,P.IDPERSONA,P.APELLIDOPERSONA,m.CARRERA FROM PERSONA p ,MAESTRO m 
+                    query = @"SELECT P.NOMBREPERSONA,M.CARGO,P.IDPERSONA,P.APELLIDOPERSONA,m.CARRERA,m.IDPROYECTO FROM PERSONA p ,MAESTRO m 
                         where p.CI_PER='" + txtUser.Text + "' AND P.PASSWORDPERSONA='" + txtPass.Text + "'AND m.IDPERSONA=p.IDPERSONA;";
                     privilegio = "maestro";
                     
@@ -64,6 +64,14 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
                                     Session["apellido"] = Convert.ToString(read[3]);
                                     Session["carrera"] = Convert.ToString(read[4]);
                                     Response.Redirect("../formularios/CV/ActualizarFormatos.aspx");
+                                    break;
+                                case "DP":
+                                    Session["idPersona"] = Convert.ToString(read[2]);
+                                    Session["nombre"] = Convert.ToString(read[0]);
+                                    Session["apellido"] = Convert.ToString(read[3]);
+                                    Session["carrera"] = Convert.ToString(read[4]);
+                                    Session["idProyecto"] = Convert.ToString(read[5]);
+                                    Response.Redirect("../formularios/DP/RegistrarCalificaciones.aspx");
                                     break;
                                 default:
                                     break;

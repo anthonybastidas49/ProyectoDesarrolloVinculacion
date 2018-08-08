@@ -17,6 +17,7 @@ public partial class Vista_formularios_CV_ActualizarFormatos : System.Web.UI.Pag
         idMaestro = Convert.ToInt16(Session["idPersona"]);
         lblNombre.Text = Convert.ToString(Session["nombre"]) + Convert.ToString(Session["apellido"]);
             actualizarDocumento();
+        carrera = Convert.ToString(Session["carrera"]);
     }
     public void actualizarDocumento()
     {
@@ -92,5 +93,15 @@ public partial class Vista_formularios_CV_ActualizarFormatos : System.Web.UI.Pag
             
         }
         
+    }
+
+    protected void vistaDocumentos_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+       
+    }
+
+    protected void vistaDocumentos_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+        Response.Write("<script type='text/javascript'> alert('OSEA SI') </script>");
     }
 }

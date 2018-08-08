@@ -99,7 +99,7 @@
                         <table class="auto-style13">
                             <tr>
                                 <td class="auto-style14" >
-                                    <a href="VistaDirectorDepa.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/solicitudEstudiante.png" Width="127px" /></a>
+                                    <a href="VistaDirectorDepa.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/registrarCalificaciones.png" Width="127px" /></a>
                                 </td>
                                 <td>
                                     <a href="VistaDirectorDepaMaestros.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/maestrosVincular.png" Width="162px" /></a>

@@ -26,12 +26,9 @@ namespace ConexionDatos.Model
         public List<Maestro> queryDocentesProyecto()
         {
             List<Maestro> listaMaestro = new List<Maestro>();
-            //try
-            //{
                 cnn = c.conectar;
                 using (cnn)
                 {
-
                     query = @"SELECT DISTINCT m.IDPROYECTO,m.IDPERSONA,m.CARGO,m.CARGO,P.NOMBREPERSONA, p.APELLIDOPERSONA FROM Persona p,MAESTRO m, ESTUDIANTE e WHERE m.CARGO = 'MP' AND M.IDPERSONA=P.IDPERSONA";
                     SqlCommand cmd = new SqlCommand(query, cnn);
                     SqlDataReader read = cmd.ExecuteReader();
@@ -41,15 +38,8 @@ namespace ConexionDatos.Model
                             Convert.ToString(read[2]), Convert.ToString(read[3]), Convert.ToString(read[4]),
                             Convert.ToString(read[5]));
                         listaMaestro.Add(maestro);
-
                     }
-                }
-            //}
-            //catch
-            //{
-
-            //};
-            
+                }            
             cnn.Close();
             c.desconectar();
             return listaMaestro;

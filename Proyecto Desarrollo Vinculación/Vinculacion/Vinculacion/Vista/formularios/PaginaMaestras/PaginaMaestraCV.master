@@ -103,6 +103,8 @@
                                     <a href="ActualizarFormatos.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/Formato.png" Width="138px" /></a>
                                 </td>
                                 <td> 
+
+                                    <a href="../CV/RegistroDocumentación.aspx"><asp:Image ID="Image4" runat="server" Height="116px" ImageUrl="~/Imagenes/subirDocumentos.png" Width="159px" /></a>
                                 </td>
                                 <td>
                                 </td>

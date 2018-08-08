@@ -33,7 +33,7 @@
                         
                     </td>
                     <td>
-                    <asp:GridView AutoGenerateSelectButton = true ID="vistaDocumentos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" EnableTheming="True" OnRowUpdating="Page_Load" CssClass="diseñoTabla" Height="16px" Width="314px" OnSelectedIndexChanged="vistaDocumentos_SelectedIndexChanged">
+                    <asp:GridView AutoGenerateSelectButton = true ID="vistaDocumentos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" EnableTheming="True" OnRowUpdating="Page_Load" CssClass="diseñoTabla" Height="16px" Width="314px" OnSelectedIndexChanged="vistaDocumentos_SelectedIndexChanged" AutoGenerateEditButton="True" OnRowEditing="vistaDocumentos_RowEditing" OnRowUpdated="vistaDocumentos_RowUpdated">
                     <AlternatingRowStyle BackColor="White" />
                     <EditRowStyle BackColor="#7C6F57" />
                     <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

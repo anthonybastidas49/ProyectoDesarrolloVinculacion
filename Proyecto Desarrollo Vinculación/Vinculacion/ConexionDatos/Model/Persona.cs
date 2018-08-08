@@ -15,6 +15,8 @@ namespace ConexionDatos.Model
         public String APELLIDOPERSONA { get; set; }
         public String CORREOPERSONA { get; set; }
         public String TELEFONOPERSONA { get; set; }
+        public int idProyecto { get; set; }
+
         public Persona(int idPersona, string cI_PER, string nOMBREPERSONA, string aPELLIDOPERSONA, string cORREOPERSONA, string tELEFONOPERSONA)
         {
             this.idPersona = idPersona;
@@ -24,11 +26,34 @@ namespace ConexionDatos.Model
             CORREOPERSONA = cORREOPERSONA;
             TELEFONOPERSONA = tELEFONOPERSONA;
         }
+        public Persona(int idPersona, string cI_PER, string nOMBREPERSONA, string aPELLIDOPERSONA, string cORREOPERSONA, string tELEFONOPERSONA, int idProyecto)
+        {
+            this.idPersona = idPersona;
+            CI_PER = cI_PER;
+            NOMBREPERSONA = nOMBREPERSONA;
+            APELLIDOPERSONA = aPELLIDOPERSONA;
+            CORREOPERSONA = cORREOPERSONA;
+            TELEFONOPERSONA = tELEFONOPERSONA;
+            this.idProyecto = idProyecto;
+        }
         public Persona()
         {
 
         }
-
+        public Persona(int idPersona, string nOMBREPERSONA, string aPELLIDOPERSONA, int idProyecto)
+        {
+            this.idPersona = idPersona;
+            NOMBREPERSONA = nOMBREPERSONA;
+            APELLIDOPERSONA = aPELLIDOPERSONA;
+            this.idProyecto = idProyecto;
+        }
+        public Persona(int idPersona, string cI_PER, string nOMBREPERSONA, string aPELLIDOPERSONA)
+        {
+            this.idPersona = idPersona;
+            CI_PER = cI_PER;
+            NOMBREPERSONA = nOMBREPERSONA;
+            APELLIDOPERSONA = aPELLIDOPERSONA;
+        }
 
     }
 }

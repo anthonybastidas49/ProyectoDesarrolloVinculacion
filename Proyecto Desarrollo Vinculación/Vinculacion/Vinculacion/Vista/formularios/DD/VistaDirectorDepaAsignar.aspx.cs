@@ -71,15 +71,9 @@ public partial class Vista_formularios_VistaDirectorDepaAsignar : System.Web.UI.
         EstudianteDAO estudianteDao = new EstudianteDAO();
         Estudiante estudiante = new Estudiante();
         Maestro maestro = new Maestro();
-        String maestro1;
-        String maestro2;
-        String estudiante1;
-        String estudiante2;
         
         foreach (Estudiante aux in listaEstudiante)
         {
-            estudiante1 = dropEstudiante.SelectedItem.Value;
-            estudiante2 = aux.idPersona + " " + aux.nombre + " " + aux.apellido;
             if ((dropEstudiante.SelectedItem.Value).Equals((aux.idPersona + " " + aux.nombre + " " + aux.apellido)))
             {
                 estudiante = new Estudiante(aux.idProyecto,aux.idPersona,aux.numHorasCumplidas,aux.idPersona,aux.nombre,
@@ -90,8 +84,6 @@ public partial class Vista_formularios_VistaDirectorDepaAsignar : System.Web.UI.
         
         foreach (Maestro aux in listaMaestro)
         {
-            maestro1 = dropMaestro.SelectedItem.Value;
-            maestro2 = aux.idPersona + " " + aux.nombre + " " + aux.apellido;
             if ((dropMaestro.SelectedItem.Value).Equals(aux.idPersona + " " + aux.nombre + " " + aux.apellido))
             {
                 maestro = new Maestro(aux.idProyecto, aux.idPersona, aux.cargo, aux.carrera, aux.nombre, aux.apellido);

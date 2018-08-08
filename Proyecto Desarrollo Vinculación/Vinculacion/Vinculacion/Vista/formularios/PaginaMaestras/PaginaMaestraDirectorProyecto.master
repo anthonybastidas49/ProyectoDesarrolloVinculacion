@@ -101,15 +101,18 @@
                         <table class="auto-style13">
                             <tr>
                                 <td class="auto-style14" >
-                                    <a href="VistaDirectorDepa.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/solicitudEstudiante.png" Width="127px" /></a>
+                                    <a href="../DP/RegistrarCalificaciones.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/registrarCalificaciones.png" Width="127px" /></a>
+                                </td>
+                                
+                                <td>
+                                    <a href="../DP/ModificarCalificacion.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/modificar.png" Width="162px" /></a>
                                 </td>
                                 <td>
-                                    <a href="VistaDirectorDepaMaestros.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/maestrosVincular.png" Width="162px" /></a>
+                                    <a href="../DP/ResgistrarPractica.aspx"><asp:Image ID="Image5" runat="server" Height="112px" ImageUrl="~/Imagenes/practicas.png" Width="180px" /></a>
                                 </td>
                                 <td>
 
-                                    <a href="VistaDirectorDepaAsignar.aspx"><asp:Image ID="Image5" runat="server" Height="112px" ImageUrl="~/Imagenes/tutorAcademico.png" Width="180px" /></a>
-
+                                   <a href="../DP/ModificarPractica.aspx"><asp:Image ID="Image6" runat="server" Height="102px" ImageUrl="~/Imagenes/modificarPractica.png" Width="121px" /></a>
                                 </td>
                             </tr>
                         </table>
@@ -135,7 +138,7 @@
                     © Copyright ESPE EDU. ® Todos los derechos reservados 2018
                 </td>
                 <td>
-                    <a href="indexVinculacion.aspx"><asp:Image  runat="server" ImageAlign="Left" ImageUrl="~/Imagenes/home.png" ToolTip="index" Height="65px" Width="80px" /></a>
+                    <a href="../indexVinculacion.aspx"><asp:Image  runat="server" ImageAlign="Left" ImageUrl="~/Imagenes/home.png" ToolTip="index" Height="65px" Width="80px" /></a>
                 </td>
             </tr>
         </table>

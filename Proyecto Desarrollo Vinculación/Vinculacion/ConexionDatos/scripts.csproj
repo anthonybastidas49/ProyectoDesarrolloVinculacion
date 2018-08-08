@@ -45,12 +45,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Conexion.settings</DependentUpon>
     </Compile>
+    <Compile Include="Model\Actividad.cs" />
+    <Compile Include="Model\ActividadDAO.cs" />
+    <Compile Include="Model\Calificacion.cs" />
+    <Compile Include="Model\CalificacionDAO.cs" />
     <Compile Include="Model\ConexionDB.cs" />
     <Compile Include="Configuracion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Configuracion.settings</DependentUpon>
     </Compile>
+    <Compile Include="Model\Documento.cs" />
+    <Compile Include="Model\DocumentoDAO.cs" />
     <Compile Include="Model\Estudiante.cs" />
     <Compile Include="Model\EstudianteDAO.cs" />
     <Compile Include="Model\Formato.cs" />
