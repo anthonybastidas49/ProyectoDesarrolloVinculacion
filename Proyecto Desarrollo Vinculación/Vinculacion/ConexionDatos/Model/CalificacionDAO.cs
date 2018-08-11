@@ -55,6 +55,29 @@ namespace ConexionDatos.Model
             return;
 
         }
+        public List<Calificacion> extraerCalificación(int idEstudiante,String nombre,String apellido)
+        {
+            List<Calificacion> retorno = new List<Calificacion>();
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            String query = "SELECT * FROM CALIFICACION WHERE IDPERSONA =" + idEstudiante + ""; 
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Calificacion calificacion = new Calificacion(Convert.ToInt16(read[0]),
+                        Convert.ToInt16(read[1]),Convert.ToInt16(read[2]), Convert.ToInt16(read[3]),
+                        Convert.ToInt16(read[4]), Convert.ToInt16(read[5]), Convert.ToInt16(read[6]),Convert.ToString(read[7]),
+                        nombre,apellido);
+                    retorno.Add(calificacion);
+                }
+            }
+            return retorno;
+        }
         
     }
 }

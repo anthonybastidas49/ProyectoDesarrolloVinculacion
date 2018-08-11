@@ -13,6 +13,27 @@ namespace ConexionDatos.Model
         String query;
         SqlCommand cmd = new SqlCommand();
         ConexionDB c = new ConexionDB();
+        String retorno = "";
+        public String nombreDirector(int idProyecto)
+        {
+            cnn = c.conectar;
+            
+            using (cnn)
+            {
+                query = "SELECT  p.NOMBREPERSONA,p.APELLIDOPERSONA FROM MAESTRO m, PERSONA p,PROYECTO pr " +
+                "WHERE m.IDPERSONA=p.IDPERSONA AND m.CARGO='DP' AND pr.IDPROYECTO=" + idProyecto + " AND m.IDPROYECTO=pr.IDPROYECTO;";
+                cmd = new SqlCommand(query, cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    retorno=Convert.ToString(read[0])+" "+Convert.ToString(read[1]) ;
+                ;
+                }
+            }
+
+            c.desconectar();
+            return retorno;
+        }
         public void agregarMaestro(Maestro ma)
         {
             cnn = c.conectar;

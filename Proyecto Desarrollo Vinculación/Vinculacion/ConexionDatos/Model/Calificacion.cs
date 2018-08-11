@@ -60,5 +60,11 @@ namespace ConexionDatos.Model
             this.puntualidad = puntualidad;
             this.honestidad = honestidad;
         }
+
+        public Calificacion(int idCalificacion, int idProyecto, int idPersona, int dominio, int respeto, int puntualidad, int honestidad) : this(idCalificacion, idProyecto, idPersona, dominio, respeto)
+        {
+            this.puntualidad = puntualidad;
+            this.honestidad = honestidad;
+        }
     }
 }

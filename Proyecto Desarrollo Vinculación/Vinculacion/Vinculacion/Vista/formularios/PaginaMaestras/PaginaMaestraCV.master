@@ -107,6 +107,7 @@
                                     <a href="../CV/RegistroDocumentación.aspx"><asp:Image ID="Image4" runat="server" Height="116px" ImageUrl="~/Imagenes/subirDocumentos.png" Width="159px" /></a>
                                 </td>
                                 <td>
+                                    <a href="../CV/Certificado.aspx"><asp:Image ID="Image5" runat="server" Height="122px" ImageUrl="~/Imagenes/certificado.png" Width="150px" /></a>
                                 </td>
                             </tr>
                         </table>

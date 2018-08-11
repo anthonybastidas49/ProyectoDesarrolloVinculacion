@@ -15,6 +15,28 @@ namespace ConexionDatos.Model
         {
 
         }
+        public Proyecto nomProyecto(int idProyecto)
+        {
+            SqlConnection cnn;
+            ConexionDB c = new ConexionDB();
+            string query;
+            cnn = c.conectar;
+            Proyecto retornor = new Proyecto();
+            using (cnn)
+            {
+
+                query = "SELECT * FROM PROYECTO WHERE IDPROYECTO="+idProyecto+"";
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Proyecto pro = new Proyecto(Convert.ToInt32(read[0]), Convert.ToString(read[1]),
+                    Convert.ToDateTime(read[2]), Convert.ToString(read[3]), Convert.ToInt16(read[4]),
+                    Convert.ToDateTime(read[5]), Convert.ToInt16(read[6]), Convert.ToString(read[7]));
+                }
+            }
+            return pro;
+        }
         public List<Proyecto> mostrarInformacion(String carrera)
         {
            

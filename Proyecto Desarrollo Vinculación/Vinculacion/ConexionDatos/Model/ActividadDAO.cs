@@ -16,8 +16,8 @@ namespace ConexionDatos.Model
             string query;
             SqlCommand cmd = new SqlCommand();
             cnn = c.conectar;
-            query = "INSERT INTO ACTIVIDAD(IDPROYECTO,IDPERSONA,DIAPRACTICA,NUMHORAS,DESCRIPCION)" +
-                "VALUES("+aux.idPoryecto+","+aux.idPersona+",'"+aux.diaPractica+"',"+aux.numHoras+",'"+aux.descripcion+"')";
+            query = "INSERT INTO ACTIVIDAD(IDPROYECTO,IDPERSONA,DIAPRACTICA,NUMHORAS,DESCRIPCION,CONFIRMACION)" +
+                "VALUES("+aux.idPoryecto+","+aux.idPersona+",'"+aux.diaPractica+"',"+aux.numHoras+",'"+aux.descripcion+"','NO')";
             cmd = new SqlCommand(query, cnn);
             cmd.ExecuteNonQuery();
             actualizarHoras(aux.idPersona, aux.numHoras);
@@ -97,6 +97,30 @@ namespace ConexionDatos.Model
             query = "DELETE FROM ACTIVIDAD WHERE IDACTIVIDAD="+aux.idActividad+"";
             cmd = new SqlCommand(query, cnn);
             cmd.ExecuteNonQuery();
+        }
+        public List<Actividad> extraerActividades(int idEstudiante)
+        {
+
+            List<Actividad> retorno = new List<Actividad>();
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            String query = "SELECT * FROM ACTIVIDAD WHERE IDPERSONA =" + idEstudiante + "";
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Actividad enviar = new Actividad(Convert.ToInt16(read[0]), Convert.ToInt16(read[1]),
+                        Convert.ToInt16(read[2]), Convert.ToString(read[3]), Convert.ToInt16(read[4]),
+                        Convert.ToString(read[5]));
+                    retorno.Add(enviar);
+                    
+                }
+            }
+            return retorno;
         }
     }
 }

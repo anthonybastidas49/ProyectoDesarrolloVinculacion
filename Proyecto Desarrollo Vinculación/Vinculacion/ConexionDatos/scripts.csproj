@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\Vinculacion\extensiones\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,8 @@
     </Compile>
     <Compile Include="Model\Actividad.cs" />
     <Compile Include="Model\ActividadDAO.cs" />
+    <Compile Include="Model\Beneficiario.cs" />
+    <Compile Include="Model\BeneficiarioDAO.cs" />
     <Compile Include="Model\Calificacion.cs" />
     <Compile Include="Model\CalificacionDAO.cs" />
     <Compile Include="Model\ConexionDB.cs" />
@@ -65,6 +70,8 @@
     <Compile Include="Model\MaestroDAO.cs" />
     <Compile Include="Model\Persona.cs" />
     <Compile Include="Model\PersonaDAO.cs" />
+    <Compile Include="Model\Planificacion.cs" />
+    <Compile Include="Model\PlanificacionDAO.cs" />
     <Compile Include="Model\Proyecto.cs" />
     <Compile Include="Model\ProyectoDAO.cs" />
     <Compile Include="Model\Solicitud.cs" />

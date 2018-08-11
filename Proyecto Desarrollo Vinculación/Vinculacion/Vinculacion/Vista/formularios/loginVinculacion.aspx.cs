@@ -37,9 +37,14 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
                 }
                 if (rbE.Checked.Equals(true))
                 {
-                    query = @"SELECT P.NOMBREPERSONA,P.IDPERSONA FROM PERSONA p ,Estudiante m 
+                    query = @"SELECT P.NOMBREPERSONA,P.APELLIDOPERSONA,P.IDPERSONA,m.IDPROYECTO FROM PERSONA p ,Estudiante m 
                         where p.CI_PER='" + txtUser.Text + "' AND P.PASSWORDPERSONA='" + txtPass.Text + "'AND m.IDPERSONA=p.IDPERSONA;";
                     privilegio = "estudiante";
+                }
+                if(rbB.Checked.Equals(true))
+                {
+                    query = "SELECT * FROM BENEFICIARIO WHERE CEDULA='" + txtUser.Text+ "' AND PASSWORD='" + txtPass.Text + "'";
+                    privilegio = "beneficiario";
                 }
                 SqlCommand cmd = new SqlCommand(query, cnn);
                 SqlDataReader read = cmd.ExecuteReader();
@@ -78,6 +83,20 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
                                
                             }
                         break;
+                        case "estudiante":
+                            Session["idPersona"] = Convert.ToString(read[2]);
+                            Session["nombre"] = Convert.ToString(read[0]);
+                            Session["apellido"] = Convert.ToString(read[1]);
+                            Session["idProyecto"] = Convert.ToString(read[3]);
+                            Response.Redirect("../formularios/ES/visualizarCalificaciones.aspx");
+                        break;
+                        case "beneficiario":
+                            Session["nombre"] = Convert.ToString(read[1]);
+                            Session["apellido"] = Convert.ToString(read[2]);
+                            Session["idProyecto"] = Convert.ToString(read[0]);
+                            Response.Redirect("../formularios/BF/Confirmacion.aspx");
+                           
+                            break;
                         default:
                             break;
                     }

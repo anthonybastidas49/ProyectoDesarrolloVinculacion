@@ -19,3 +19,5 @@ D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desar
 D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\scripts.csproj.CoreCompileInputs.cache
 D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.dll
 D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\ConexionDatos.pdb
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\bin\Debug\itextsharp.dll
+D:\Espe\5 QuintoSemestre\Desarrollo\ProyectoDesarrolloVinculacion\Proyecto Desarrollo Vinculación\Vinculacion\ConexionDatos\obj\Debug\scripts.csproj.CopyComplete

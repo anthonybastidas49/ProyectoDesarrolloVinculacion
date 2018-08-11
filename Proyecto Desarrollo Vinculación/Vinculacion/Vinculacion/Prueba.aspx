@@ -6,6 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -27,6 +32,14 @@
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="DESCARGAR" />
     </div>
         </div>
+        <div>
+            <table><tr><td style="width: 100px"</td><td ><asp:Image ID="Image1" runat="server" Height="174px" ImageUrl="~/Imagenes/Logo_ESPE.png" Width="235px" /></td><td style="width: 1000px"></td><td><asp:Image ID="Image2" runat="server" ImageUrl="~/Imagenes/logo vinculacion.png" /></td></tr></table></div>
+
     </form>
+    <div>
+        <p class="auto-style1">
+
+        </p>
+    </div>
 </body>
 </html>

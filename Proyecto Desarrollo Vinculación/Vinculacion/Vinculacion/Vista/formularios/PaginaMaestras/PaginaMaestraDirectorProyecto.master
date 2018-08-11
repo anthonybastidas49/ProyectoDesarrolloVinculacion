@@ -112,7 +112,16 @@
                                 </td>
                                 <td>
 
-                                   <a href="../DP/ModificarPractica.aspx"><asp:Image ID="Image6" runat="server" Height="102px" ImageUrl="~/Imagenes/modificarPractica.png" Width="121px" /></a>
+                                   <a href="../DP/ModificarPractica.aspx"><asp:Image ID="Image6" runat="server" Height="116px" ImageUrl="~/Imagenes/modificarPractica.png" Width="143px" /></a>
+                                </td>
+                                <td>
+                                    <a href="../DP/AgregarPlanificacion.aspx"><asp:Image ID="Image7" runat="server" Height="132px" ImageUrl="~/Imagenes/planification.png" Width="156px" /></a>
+                                </td>
+                                <td>
+                                   <a href="../DP/ModificarPlanificacion.aspx"> <asp:Image ID="Image8" runat="server" Height="129px" ImageUrl="~/Imagenes/editar.png" Width="150px" /></a>
+                                </td>
+                                <td>
+                                    <a href="../DP/AgregarRepresentante.aspx"><asp:Image ID="Image9" runat="server" Height="130px" ImageUrl="~/Imagenes/añadirBeneficiario.png" Width="175px" /></a>
                                 </td>
                             </tr>
                         </table>

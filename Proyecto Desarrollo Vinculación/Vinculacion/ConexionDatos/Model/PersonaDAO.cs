@@ -41,6 +41,27 @@ namespace ConexionDatos.Model
            
             return retorno;
         }
+        public List<Persona>registrarCertificadosDisponibles(String carrera)
+        {
+            List<Persona> retorno = new List<Persona>();
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            query = "SELECT DISTINCT  per.IDPERSONA,per.CI_PER,per.NOMBREPERSONA,per.APELLIDOPERSONA,per.CORREOPERSONA,per.TELEFONOPERSONA,p.IDPROYECTO FROM ESTUDIANTE e, PROYECTO p,PERSONA per WHERE e.IDPROYECTO=p.IDPROYECTO AND p.carrera='"+carrera+"' and e.IDPERSONA=per.IDPERSONA AND e.NUMHORASCUMPLIDAS>0";
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Persona pro = new Persona(Convert.ToInt16(read[0]), Convert.ToString(read[1]),
+                    Convert.ToString(read[2]), Convert.ToString(read[3]), Convert.ToString(read[4]), Convert.ToString(read[5]), Convert.ToInt16(read[6]));
+                    retorno.Add(pro);
+                }
+            }
+            return retorno;
+        }
         public List<Persona>validarDatos(int idProyecto1)
         {
             List<Persona> retorno = new List<Persona>();

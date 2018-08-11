@@ -12,6 +12,27 @@ namespace ConexionDatos.Model
         SqlConnection cnn;
         ConexionDB c = new ConexionDB();
         string query;
+        public int numHoras(int idPersona)
+        {
+            int horas=0;
+            List<Estudiante> listaEstudiante = new List<Estudiante>();
+            cnn = c.conectar;
+            using (cnn)
+            {
+
+                query = "SELECT NUMHORASCUMPLIDAS FROM ESTUDIANTE WHERE IDPERSONA="+idPersona+"";
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    horas = Convert.ToInt16(read[0]);
+
+                }
+            }
+            cnn.Close();
+            c.desconectar();
+            return horas;
+        }
         public List<Estudiante> queryEstudiante()
         {
             List<Estudiante> listaEstudiante = new List<Estudiante>();
