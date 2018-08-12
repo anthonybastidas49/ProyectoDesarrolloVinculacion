@@ -67,18 +67,27 @@ public partial class Vista_formularios_DP_ModificarPractica : System.Web.UI.Page
 
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
-        Actividad enviar = new Actividad(Convert.ToInt16(vistaActividades.SelectedRow.Cells[1].Text),
-                Convert.ToInt16(vistaActividades.SelectedRow.Cells[2].Text),Convert.ToInt16(vistaActividades.SelectedRow.Cells[3].Text),
-                Convert.ToString(vistaActividades.SelectedRow.Cells[4].Text),Convert.ToInt16(txtHoras.Text),
-                txtDescrioción.Text);
-        crudActividad.registrarCambios(enviar,Convert.ToInt16(vistaActividades.SelectedRow.Cells[5].Text));
-        llenarEstudiantes();
-        vistaActividades.DataSource = null;
-        vistaActividades.DataBind();
-        lblApellido.Text = "";
-        txtDescrioción.Text = "";
-        txtHoras.Text = "";
-        lblNom.Text = "";
+        if(!lblApellido.Text.Equals(""))
+        {
+            Actividad enviar = new Actividad(Convert.ToInt16(vistaActividades.SelectedRow.Cells[1].Text),
+                            Convert.ToInt16(vistaActividades.SelectedRow.Cells[2].Text), Convert.ToInt16(vistaActividades.SelectedRow.Cells[3].Text),
+                            Convert.ToString(vistaActividades.SelectedRow.Cells[4].Text), Convert.ToInt16(txtHoras.Text),
+                            txtDescrioción.Text);
+            crudActividad.registrarCambios(enviar, Convert.ToInt16(vistaActividades.SelectedRow.Cells[5].Text));
+            llenarEstudiantes();
+            vistaActividades.DataSource = null;
+            vistaActividades.DataBind();
+            lblApellido.Text = "";
+            txtDescrioción.Text = "";
+            txtHoras.Text = "";
+            lblNom.Text = "";
+            Response.Write("<script language=javascript>alert('DATOS MODIFICADOS');</script>");
+        }
+        else
+        {
+            Response.Write("<script language=javascript>alert('Seleccione un Estudiante');</script>");
+        }
+        
 
     }
 

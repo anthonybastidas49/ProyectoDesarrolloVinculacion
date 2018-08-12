@@ -117,4 +117,16 @@ public partial class Vista_formularios_CV_RegistroDocumentación : System.Web.UI
         }
         actualizarLista();
     }
+
+    protected void vistaEstado_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Documento descargar = new Documento();
+        descargar = crudDocumento.retornoDocumento(Convert.ToInt16(vistaEstado.SelectedRow.Cells[2].Text));
+        byte[] archivo = descargar.documento;
+        Response.Clear();
+        Response.AddHeader("content-disposition", string.Format("attachment;filename={0}", "" + descargar.nombreDocumento + "." + descargar.extension + ""));
+        Response.ContentType = "application/octet-stream";
+        Response.BinaryWrite(archivo);
+        Response.End();
+    }
 }

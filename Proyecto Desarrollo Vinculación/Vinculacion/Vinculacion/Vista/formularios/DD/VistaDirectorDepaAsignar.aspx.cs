@@ -41,7 +41,7 @@ public partial class Vista_formularios_VistaDirectorDepaAsignar : System.Web.UI.
     {
         dropEstudiante.Items.Clear();
         EstudianteDAO estudianteDAO = new EstudianteDAO();
-        listaEstudiante = estudianteDAO.queryEstudiante();
+        listaEstudiante = estudianteDAO.queryEstudiante(carrera);
         foreach (Estudiante aux in listaEstudiante)
         {
             dropEstudiante.Items.Add(aux.idPersona+" "+aux.nombre + " " + aux.apellido);

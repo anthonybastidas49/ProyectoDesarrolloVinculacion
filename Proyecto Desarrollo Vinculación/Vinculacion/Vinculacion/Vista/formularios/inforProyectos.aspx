@@ -52,9 +52,10 @@
         </div>
         <div class="auto-style5">
         </div>
+        <link href="../estilos/CV.css" rel="stylesheet" />
         <div class="auto-style5">
 
-            <asp:GridView ID="vistaProyecto" runat="server" CellPadding="4" CssClass="estiloLista" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="vistaProyecto" runat="server" CellPadding="4" CssClass="mGrid" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

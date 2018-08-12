@@ -1,0 +1,11 @@
+﻿body {
+}
+.divMenu {
+    border-radius: 20px 20px 20px 20px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    filter: alpha(opacity=20); /* IE8 and lower */
+    zoom: 1;
+}
+

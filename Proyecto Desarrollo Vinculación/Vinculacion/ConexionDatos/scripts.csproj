@@ -54,6 +54,8 @@
     <Compile Include="Model\BeneficiarioDAO.cs" />
     <Compile Include="Model\Calificacion.cs" />
     <Compile Include="Model\CalificacionDAO.cs" />
+    <Compile Include="Model\Certificado.cs" />
+    <Compile Include="Model\CertificadoDAO.cs" />
     <Compile Include="Model\ConexionDB.cs" />
     <Compile Include="Configuracion.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -76,6 +78,7 @@
     <Compile Include="Model\ProyectoDAO.cs" />
     <Compile Include="Model\Solicitud.cs" />
     <Compile Include="Model\SolicitudDAO.cs" />
+    <Compile Include="Model\validaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,12 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class Prueba : System.Web.UI.Page
 {
+    MailMessage email = new MailMessage();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -98,4 +101,32 @@ public partial class Prueba : System.Web.UI.Page
         Response.End();
     }
 
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        email.To.Add(new MailAddress("anthonybastidas49@gmail.com"));
+        email.From = new MailAddress("example2@example.com");
+        email.Subject = "PRUEAB ( " + DateTime.Now.ToString("dd / MMM / yyy hh:mm:ss") + " ) ";
+        email.Body = "Cualquier contenido en <b>HOLA</b> para enviarlo por correo electrónico.";
+        email.IsBodyHtml = true;
+        email.Priority = MailPriority.Normal;
+        SmtpClient smtp = new SmtpClient();
+        smtp.Host = "gmail.com";
+        smtp.Port = 2525;
+        smtp.EnableSsl = false;
+        smtp.UseDefaultCredentials = false;
+        smtp.Credentials = new NetworkCredential("anthonybastidas48@gmail", "1723551055");
+
+        string output = null;
+        try
+        {
+            smtp.Send(email);
+            email.Dispose();
+            Response.Write("<script language=javascript>alert('si');</script>");
+        }
+        catch (Exception ex)
+        {
+            Response.Write("<script language=javascript>alert('no');</script>");
+        }
+    }
 }

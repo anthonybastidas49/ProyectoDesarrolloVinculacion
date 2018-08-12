@@ -8,7 +8,7 @@
     
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>SISTEMA DE SERVICIO COMUNITARIO</title>
-   
+
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -48,14 +48,21 @@
         }
         .auto-style14 {
             width: 178px;
+            text-align: center;
+            margin-left: 40px;
+        }
+        .auto-style15 {
+            font-size: 12pt;
+        }
+        .auto-style16 {
             text-align: left;
+            font-size: 12pt;
         }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-
-        <table id="tablaHorizontal"style="width:100%">
+        <table>
             <tr id="lineaAhorizontal">
                 <td id="lineaAhorizontal1" class="auto-style1">
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/logo-espe.png" ToolTip="ESPE" Height="83px" Width="449px" />   
@@ -68,6 +75,8 @@
                 </td>
             </tr>
             </table>
+        <hr style="border: 4px ridge #FFFF66" />
+
         <table id="tablaMedio" class="auto-style9">
             <tr>
                 <td id="tablaMedio1" class="auto-style6">
@@ -96,18 +105,23 @@
                     </table>
                 </td>
                 <td id="tablaMedio2">
-                    <div>
+                    <div class="divMenuM">
+                        <link href="../../estilos/ES.css" rel="stylesheet" />
                         <table class="auto-style13">
                             <tr>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
                                 <td class="auto-style14" >
-                                    <a href="../ES/visualizarCalificaciones.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/calificaciones.png" Width="138px" /></a>
+                                    <a href="../ES/visualizarCalificaciones.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/calificaciones.png" Width="138px" ToolTip="VIZUALIZAR CALIFICACIÓN" /></a><br /><h3 class="auto-style15">VIZUALIZAR CALIFICACIÓN</h3>
                                 </td>
-                                <td> 
-                                    <a href="../ES/ConsultaActividad.aspx"><asp:Image ID="Image4" runat="server" Height="116px" ImageUrl="~/Imagenes/actividades.png" Width="159px" /></a>
+                                <td class="auto-style5"> 
+                                    <a href="../ES/ConsultaActividad.aspx"><asp:Image ID="Image4" runat="server" Height="116px" ImageUrl="~/Imagenes/actividades.png" Width="159px" ToolTip="CONSULTAR ACTIVIDADES" /></a><h3 class="auto-style15">CONSULTAR ACTIVIDADES</h3>
                                 </td>
-                                <td>
-                                    <a href="../ES/ConfirmarPlanificacionaspx.aspx"><asp:Image ID="Image5" runat="server" Height="122px" ImageUrl="~/Imagenes/planification.png" Width="135px" /></a>
+                                <td class="auto-style5">
+                                    <a href="../ES/ConfirmarPlanificacionaspx.aspx"><asp:Image ID="Image5" runat="server" Height="122px" ImageUrl="~/Imagenes/planification.png" Width="135px" ToolTip="CONSULTAR PLANIFICACIÓN" /></a><h3 class="auto-style15">CONSULTAR PLANIFICACIÓN</h3>
                                 </td>
+                                                                <td>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image10" runat="server" Height="122px" ToolTip="CERRAR" Width="135px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style16">&nbsp;</h3>
+</td>
                             </tr>
                         </table>
                     </div>
@@ -119,6 +133,8 @@
                 </td>
             </tr>
         </table>
+        <hr style="border: 4px ridge #FFFF66" />
+
         <table id="lineaVertical"style="width:100%;height:50px">
             <tr>
                 <td id="lineaVertical1" class="auto-style8">
@@ -136,6 +152,7 @@
                 </td>
             </tr>
         </table>
+        <hr style="border: 4px ridge #FFFF66" />
     </form>
     <p class="auto-style7">
         &nbsp;</p>

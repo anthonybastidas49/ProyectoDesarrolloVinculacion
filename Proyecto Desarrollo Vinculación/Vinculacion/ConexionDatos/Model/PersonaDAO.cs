@@ -9,8 +9,81 @@ namespace ConexionDatos.Model
 {
     public class PersonaDAO
     {
+
         Proyecto pro = new Proyecto();
         string query;
+        public Persona extraerSolicitante(String cedua)
+        {
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            query = "SELECT p.IDPERSONA,p.CI_PER,p.NOMBREPERSONA,p.APELLIDOPERSONA,p.CORREOPERSONA,p.TELEFONOPERSONA FROM CATALOGOESTUDIANTE ca, PERSONA p WHERE ca.IDPERSONA NOT IN (SELECT IDPERSONA FROM ESTUDIANTE) AND ca.IDPERSONA NOT IN (SELECT IDPERSONA FROM SOLICITUD) AND p.IDPERSONA=ca.IDPERSONA AND p.CI_PER='"+cedua+"'";
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Persona pro = new Persona(Convert.ToInt16(read[0]), Convert.ToString(read[1]),
+                    Convert.ToString(read[2]), Convert.ToString(read[3]), Convert.ToString(read[4]), Convert.ToString(read[5]));
+                    return pro;
+                }
+            }
+            return null;
+        }
+        public List<Persona> extraerMaestrosDisponibles()
+        {
+            List<Persona> retorno = new List<Persona>();
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            query = "	SELECT P.IDPERSONA,P.CI_PER,P.NOMBREPERSONA,P.APELLIDOPERSONA,P.CORREOPERSONA,P.TELEFONOPERSONA	 FROM CATALOGOPROFESOR ca, PERSONA p WHERE ca.IDPERSONA NOT IN(SELECT IDPERSONA FROM MAESTRO) AND ca.IDPERSONA=p.IDPERSONA;";
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Persona pro = new Persona(Convert.ToInt16(read[0]), Convert.ToString(read[1]),
+                    Convert.ToString(read[2]), Convert.ToString(read[3]), Convert.ToString(read[4]), Convert.ToString(read[5]));
+                    retorno.Add(pro);
+                }
+            }
+            return retorno; 
+        }
+        public String extraerTutor(int idEstudiante)
+        {
+            List<Persona> retorno = new List<Persona>();
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            query = "SELECT DISTINCT p.NOMBREPERSONA,p.APELLIDOPERSONA FROM PERSONA p, ESTUDIANTE e, MAESTRO m WHERE e.IDMAPERSONA = p.IDPERSONA AND e.IDPERSONA = "+idEstudiante+";";
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    return Convert.ToString(read[0]) + " " + Convert.ToString(read[1]);
+                }
+            }
+            return "no";
+
+        }
+        public void administrador(Persona aux,String contraseña)
+        {
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            SqlCommand cmd = new SqlCommand();
+            cnn = c.conectar;
+            query = "INSERT INTO PERSONA(CI_PER,NOMBREPERSONA,APELLIDOPERSONA,CORREOPERSONA,TELEFONOPERSONA,PASSWORDPERSONA)VALUES('"+aux.CI_PER+"','"+aux.NOMBREPERSONA+"'," +
+                "'"+aux.APELLIDOPERSONA+"','"+aux.CORREOPERSONA+"','"+aux.TELEFONOPERSONA+"','"+contraseña+"')";
+            cmd = new SqlCommand(query, cnn);
+            cmd.ExecuteNonQuery();
+        }
         public List<Persona> extraerInformación(List<Solicitud> aux)
         {
             SqlConnection cnn = new SqlConnection();
@@ -79,6 +152,25 @@ namespace ConexionDatos.Model
                     Persona pro = new Persona(Convert.ToInt16(read[0]), Convert.ToString(read[1]),
                     Convert.ToString(read[2]), Convert.ToString(read[3]), Convert.ToString(read[4]), Convert.ToString(read[5]),idProyecto1);
                     retorno.Add(pro);
+                }
+            }
+            return retorno;
+        }
+        public int extraerId(String cedula)
+        {
+            int retorno=0;
+            SqlConnection cnn = new SqlConnection();
+            ConexionDB c = new ConexionDB();
+            cnn = c.conectar;
+            SqlDataReader read;
+            query = "SELECT IDPERSONA FROM PERSONA WHERE CI_PER='"+cedula+"';";
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            using (cmd)
+            {
+                read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    retorno = Convert.ToInt16(read[0]);
                 }
             }
             return retorno;

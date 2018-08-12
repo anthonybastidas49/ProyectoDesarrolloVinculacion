@@ -28,9 +28,6 @@
         .auto-style6 {
             width: 136px;
         }
-        .auto-style7 {
-            text-align: left;
-        }
         .auto-style8 {
             text-align: right;
         }
@@ -43,19 +40,22 @@
             font-size: xx-large;
             text-align: center;
         }
-        .auto-style13 {
-            height: 148px;
-            width: 127px;
-        }
         .auto-style14 {
-            width: 178px;
-            text-align: left;
+            width: 192px;
+            text-align: center;
+        }
+        .auto-style15 {
+            font-size: 10pt;
+        }
+        .auto-style17 {
+            font-size: 10pt;
+            text-align: center;
         }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-
+        <link href="../../estilos/DP.css" rel="stylesheet" />
         <table id="tablaHorizontal"style="width:100%">
             <tr id="lineaAhorizontal">
                 <td id="lineaAhorizontal1" class="auto-style1">
@@ -69,6 +69,7 @@
                 </td>
             </tr>
             </table>
+                <hr style="border: 4px ridge #FF3E3E" />
         <table id="tablaMedio" class="auto-style9">
             <tr>
                 <td id="tablaMedio1" class="auto-style6">
@@ -97,32 +98,35 @@
                     </table>
                 </td>
                 <td id="tablaMedio2">
-                    <div>
-                        <table class="auto-style13">
+                    <div class="divMenuM">
+                        <table >
                             <tr>
                                 <td class="auto-style14" >
-                                    <a href="../DP/RegistrarCalificaciones.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/registrarCalificaciones.png" Width="127px" /></a>
+                                    <a href="../DP/RegistrarCalificaciones.aspx"><asp:Image ID="Image3" runat="server" Height="100px" ImageUrl="~/Imagenes/registrarCalificaciones.png" Width="150px" /></a><br /><h3 class="auto-style15">Registrar Calificación</h3>
                                 </td>
                                 
-                                <td>
-                                    <a href="../DP/ModificarCalificacion.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/modificar.png" Width="162px" /></a>
+                                <td class="auto-style5">
+                                    <a href="../DP/ModificarCalificacion.aspx"><asp:Image ID="Image4" runat="server" Height="100px" ImageUrl="~/Imagenes/modificar.png" Width="150px" /></a><br /><h3 class="auto-style15">Modificar Calificación</h3>
                                 </td>
-                                <td>
-                                    <a href="../DP/ResgistrarPractica.aspx"><asp:Image ID="Image5" runat="server" Height="112px" ImageUrl="~/Imagenes/practicas.png" Width="180px" /></a>
+                                <td class="auto-style5">
+                                    <a href="../DP/ResgistrarPractica.aspx"><asp:Image ID="Image5" runat="server" Height="100px" ImageUrl="~/Imagenes/practicas.png" Width="150px" /></a><br /><h3 class="auto-style15">Registrar práctica</h3>
                                 </td>
-                                <td>
+                                <td class="auto-style5">
 
-                                   <a href="../DP/ModificarPractica.aspx"><asp:Image ID="Image6" runat="server" Height="116px" ImageUrl="~/Imagenes/modificarPractica.png" Width="143px" /></a>
+                                   <a href="../DP/ModificarPractica.aspx"><asp:Image ID="Image6" runat="server" Height="100px" ImageUrl="~/Imagenes/modificarPractica.png" Width="150px" /></a><br /><h3 class="auto-style15">Modificar práctica</h3>
+                                </td>
+                                <td class="auto-style5">
+                                    <a href="../DP/AgregarPlanificacion.aspx"><asp:Image ID="Image7" runat="server" Height="100px" ImageUrl="~/Imagenes/planification.png" Width="150px" /></a><br /><h3 class="auto-style15">Agregar Planificación</h3>
+                                </td>
+                                <td class="auto-style5">
+                                   <a href="../DP/ModificarPlanificacion.aspx"> <asp:Image ID="Image8" runat="server" Height="100px" ImageUrl="~/Imagenes/editar.png" Width="150px" /></a><br /><h3 class="auto-style15">Modificar Planificacón</h3>
+                                </td>
+                                <td class="auto-style5">
+                                    <a href="../DP/AgregarRepresentante.aspx"><asp:Image ID="Image9" runat="server" Height="100px" ImageUrl="~/Imagenes/añadirBeneficiario.png" Width="175px" /></a><br /><h3 class="auto-style15">Agregar Representante&nbsp;&nbsp; </h3>
                                 </td>
                                 <td>
-                                    <a href="../DP/AgregarPlanificacion.aspx"><asp:Image ID="Image7" runat="server" Height="132px" ImageUrl="~/Imagenes/planification.png" Width="156px" /></a>
-                                </td>
-                                <td>
-                                   <a href="../DP/ModificarPlanificacion.aspx"> <asp:Image ID="Image8" runat="server" Height="129px" ImageUrl="~/Imagenes/editar.png" Width="150px" /></a>
-                                </td>
-                                <td>
-                                    <a href="../DP/AgregarRepresentante.aspx"><asp:Image ID="Image9" runat="server" Height="130px" ImageUrl="~/Imagenes/añadirBeneficiario.png" Width="175px" /></a>
-                                </td>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image10" runat="server" Height="100px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style17">SALIR</h3>
+</td>
                             </tr>
                         </table>
                     </div>
@@ -134,6 +138,7 @@
                 </td>
             </tr>
         </table>
+                <hr style="border: 4px ridge #FF3E3E" />
         <table id="lineaVertical"style="width:100%;height:50px">
             <tr>
                 <td id="lineaVertical1" class="auto-style8">
@@ -151,8 +156,7 @@
                 </td>
             </tr>
         </table>
+        <hr style="border: 4px ridge #FF3E3E" />
     </form>
-    <p class="auto-style7">
-        &nbsp;</p>
 </body>
 </html>

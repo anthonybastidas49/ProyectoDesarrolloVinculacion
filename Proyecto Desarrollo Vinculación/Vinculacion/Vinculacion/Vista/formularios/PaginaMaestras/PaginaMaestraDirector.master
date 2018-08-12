@@ -7,7 +7,7 @@
     
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>SISTEMA DE SERVICIO COMUNITARIO</title>
-   
+    <link href="../../estilos/DD.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -47,7 +47,38 @@
         }
         .auto-style14 {
             width: 178px;
-            text-align: left;
+            font-size: 14pt;
+            color: #FFFFFF;
+        }
+        .auto-style15 {
+            font-size: 14pt;
+            color: #FFFFFF;
+        }
+        .auto-style16 {
+            font-size: 14pt;
+            text-align: center;
+            color: #FFFFFF;
+            width: 143px;
+        }
+        .auto-style17 {
+            color: #FFFFFF;
+        }
+        .auto-style18 {
+            font-size: 14pt;
+            text-align: center;
+            color: #FFFFFF;
+            width: 136px;
+        }
+        .auto-style19 {
+            font-size: 14pt;
+            text-align: center;
+            color: #FFFFFF;
+            width: 134px;
+        }
+        .auto-style20 {
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 14pt;
         }
         </style>
 </head>
@@ -95,27 +126,39 @@
                     </table>
                 </td>
                 <td id="tablaMedio2">
-                    <div>
+                    <hr style="border: 4px ridge #0066FF" />
+                    <div class="divMenuM">
                         <table class="auto-style13">
                             <tr>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                                 <td class="auto-style14" >
-                                    <a href="VistaDirectorDepa.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/registrarCalificaciones.png" Width="127px" /></a>
+                                    <div>
+                                    <a href="VistaDirectorDepa.aspx"><asp:Image ID="Image3" runat="server" Height="110px" ImageUrl="~/Imagenes/registrarCalificaciones.png" Width="150px" CssClass="auto-style17" ToolTip="Aprobar Solicitudes" /></a><br class="auto-style17" />
+                                    </div>
+                                    <h3 class="auto-style16">Aprobar Solicitudes</h3>
                                 </td>
                                 <td>
-                                    <a href="VistaDirectorDepaMaestros.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/maestrosVincular.png" Width="162px" /></a>
+                                    <a href="VistaDirectorDepaMaestros.aspx"><asp:Image ID="Image4" runat="server" Height="110px" ImageUrl="~/Imagenes/maestrosVincular.png" Width="150px" CssClass="auto-style15" ToolTip="Asociar Maestros" /></a><h3 class="auto-style18">Asociar Maestros</h3>
                                 </td>
                                 <td>
 
-                                    <a href="VistaDirectorDepaAsignar.aspx"><asp:Image ID="Image5" runat="server" Height="112px" ImageUrl="~/Imagenes/tutorAcademico.png" Width="180px" /></a>
+                                    <a href="VistaDirectorDepaAsignar.aspx"><asp:Image ID="Image5" runat="server" Height="110px" ImageUrl="~/Imagenes/tutorAcademico.png" Width="150px" CssClass="auto-style15" ToolTip="Tutores Academicos" /></a><h3 class="auto-style19">Tutor Académico</h3>
 
                                 </td>
+                                <td>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="110px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SALIR</h3>
+</td>
                             </tr>
                         </table>
                     </div>
+                    <hr style="border: 4px ridge #0066FF" />
+
                     <div>
                         <asp:ContentPlaceHolder id="contenidoPag" runat="server">
                          </asp:ContentPlaceHolder>
                     </div>
+                    <hr style="border: 4px ridge #0066FF" />
+
                     
                 </td>
             </tr>
@@ -137,6 +180,8 @@
                 </td>
             </tr>
         </table>
+        <hr style="border: 4px ridge #0066FF" />
+
     </form>
     <p class="auto-style7">
         &nbsp;</p>

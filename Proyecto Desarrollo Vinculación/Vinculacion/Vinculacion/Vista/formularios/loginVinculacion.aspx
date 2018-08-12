@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vista/plantilla.master" AutoEventWireup="true" CodeFile="loginVinculacion.aspx.cs" Inherits="Vista_loginVinculacion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+  
     <style type="text/css">
         .auto-style11 {
             margin-left: 0px;
@@ -23,7 +24,7 @@
             width: 79px;
         }
         .auto-style18 {
-            width: 422px;
+            width: 350px;
         }
         .auto-style19 {
             height: 30px;
@@ -36,6 +37,14 @@
     <link href="../estilos/loginEstilo.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenidoPag" Runat="Server">
+      <script type="text/javascript">
+        $(document).ready(function () {
+            $("#contenidoPag_txtUser").keypress(function (event) {
+                if (event.charCode >= 48 && event.charCode <= 57) { return true; }
+                else { return false; }
+            });
+        });
+    </script>
     <div id="login">
     <div  class="auto-style5">
             <asp:Image ID="Image1" runat="server" Height="244px" ImageUrl="~/Imagenes/acceso.png" Width="378px" CssClass="auto-style11" />
@@ -50,9 +59,10 @@
                 </td>
                 <td class="auto-style14">
                     
-                    <asp:TextBox ID="txtUser" CssClass="estiloTablaMenu" runat="server" Height="47px" Width="212px"></asp:TextBox>
+                    <asp:TextBox ID="txtUser" CssClass="estiloTablaMenu" runat="server" Height="47px" Width="212px" OnTextChanged="txtUser_TextChanged"></asp:TextBox>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtUser">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtUser" ErrorMessage="SOLO NUMEROS" ValidationExpression="^[0-9]+$" ForeColor="Red"></asp:RegularExpressionValidator>
                  </td>
             </tr>
             <tr>
@@ -87,8 +97,8 @@
           </table>
         <div class="auto-style5">
             <asp:ImageButton ID="btnLogin" runat="server" AlternateText="Ingresar" Height="101px" ImageAlign="Middle" ImageUrl="~/Imagenes/login.png" ToolTip="Ingresar" Width="341px" OnClick="ImageButton1_Click" />
-            <asp:Label ID="lblPrivilegio" runat="server" ForeColor="Red" Visible="False"></asp:Label>
-        </div>
+                
+        </div>        
         <div>
             <table  align="center" >
                 <tr>
@@ -101,13 +111,19 @@
                         <asp:CheckBox ID="CheckBox1" runat="server" ForeColor="Blue" OnCheckedChanged="CheckBox1_CheckedChanged" Text="RECORDAR CONTRASEÑA" CssClass="texto" />
                         
                     </td>
+                    
+                </tr>
+                <tr>
+                    <td class="auto-style18">
+
+                    </td>
+                    <td>
+                        <a href="Solicitud.aspx">ENVIAR SOLICITUD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                    </td>
+                    
                 </tr>
             </table>
-        </div>
-
-    </div>
-
-      
+        </div>    
   </div>  
 </asp:Content>
 

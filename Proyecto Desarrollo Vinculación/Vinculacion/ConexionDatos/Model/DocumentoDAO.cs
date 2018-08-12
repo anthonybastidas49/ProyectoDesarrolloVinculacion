@@ -80,5 +80,25 @@ namespace ConexionDatos.Model
             }
             return retorno;
         }
+        public Documento retornoDocumento(int idDocumento)
+        {
+
+            ConexionDB c = new ConexionDB();
+        SqlConnection cnx = c.conectar;
+        String query = "SELECT * FROM DOCUMENTO WHERE IDDOCUMENTO="+idDocumento+"";
+        SqlCommand cmd = new SqlCommand(query, cnx);
+        SqlDataReader reader = cmd.ExecuteReader();
+            using (cmd)
+            {
+                while (reader.Read())
+                {
+                    Documento retorno = new Documento(Convert.ToInt16(reader[0]), Convert.ToInt16(reader[1]),
+                        Convert.ToInt16(reader[2]), Convert.ToString(reader[3]), Convert.ToString(reader[4]), (byte[])reader[5], Convert.ToString(reader[6]));
+                    return retorno;
+                }
+                return null;
+
+            }
+        } 
     }
 }

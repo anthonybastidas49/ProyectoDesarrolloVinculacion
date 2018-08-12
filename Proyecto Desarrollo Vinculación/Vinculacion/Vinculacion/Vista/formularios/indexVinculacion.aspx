@@ -5,11 +5,16 @@
             font-size: x-large;
             text-align: justify;
         }
+        .auto-style15 {
+            font-size: 30pt;
+            text-align: left;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenidoPag" Runat="Server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <link href="../estilos/estiloIndex.css" rel="stylesheet" />
+    <hr style="border: 4px solid #0000FF" />
     <table id="menu" style="width:100%">
         <tr id="menuColumna">
             <td id="menu1" style="text-align:center;">
@@ -33,7 +38,7 @@
         </tr>
     </table>
     <div id="informacion" >
-        <h2 class="auto-style14">VINCULACIÓN CON LA SOCIEDAD</h2>
+        <h1 class="auto-style15">VINCULACIÓN CON LA SOCIEDAD</h1>
         <p ID="parrafoPrincipal" class="auto-style14" >
             La trayectoria de la Universidad de las Fuerzas Armadas ESPE en el ámbito de vinculación 
             con la sociedad, se remonta a la creación misma de la Escuela de Oficiales Ingenieros (1922) 
@@ -55,6 +60,7 @@
             a la comunidad.
         </p>
     </div>
+    <hr style="border: 4px solid #0000FF" />
     <div id="imagenes" style="height:500px">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
@@ -63,5 +69,6 @@
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
+    <hr style="border: 4px solid #0000FF" />
 </asp:Content>
 

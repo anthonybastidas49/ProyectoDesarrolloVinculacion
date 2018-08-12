@@ -17,7 +17,10 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
 
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
-
+        if(txtPass.Text.Equals("admin") && txtUser.Text.Equals("0000"))
+        {
+            Response.Redirect("../formularios/admin.aspx");
+        }
         if (rbM.Checked.Equals(false) && rbE.Checked.Equals(false)&&rbB.Checked.Equals(false))
         {
 
@@ -127,6 +130,11 @@ public partial class Vista_loginVinculacion :  System.Web.UI.Page
     }
 
     protected void rbB_CheckedChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtUser_TextChanged(object sender, EventArgs e)
     {
 
     }

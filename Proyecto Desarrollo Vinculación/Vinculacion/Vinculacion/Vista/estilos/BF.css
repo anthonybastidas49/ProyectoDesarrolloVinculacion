@@ -1,0 +1,70 @@
+﻿body {
+}
+.divMenuM {
+    background-color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    opacity: 0.8;
+    filter: alpha(opacity=20); /* IE8 and lower */
+    zoom: 1;
+}
+.mGrid {
+    width: 30%;
+    background-color: #ffffff;
+    margin: 5px 0 10px 0;
+    border-collapse: collapse;
+    font-size: 20pt;
+    font-style: oblique;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+    .mGrid td {
+        padding: 2px;
+        border: solid 1px #076c19;
+        color: #000000;
+    }
+
+    .mGrid th {
+        padding: 4px 2px;
+        color: #000000;
+        background: #ffffff url(grd_head.png) repeat-x top;
+        border-left: solid 1px #076c19;
+        font-size: 0.9em;
+    }
+
+    .mGrid .alt {
+        background: #076c19;
+    }
+
+    .mGrid .pgr {
+        background: #076c19;
+    }
+
+        .mGrid .pgr table {
+            margin: 5px 0;
+        }
+
+        .mGrid .pgr td {
+            border-width: 0;
+            padding: 0 6px;
+            border-left: solid 1px #666;
+            font-weight: bold;
+            color: #076c19;
+            line-height: 12px;
+        }
+
+        .mGrid .pgr a {
+            color: #666;
+            text-decoration: none;
+        }
+
+            .mGrid .pgr a:hover {
+                color: #000;
+                text-decoration: none;
+            }

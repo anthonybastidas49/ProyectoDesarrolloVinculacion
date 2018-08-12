@@ -55,5 +55,13 @@ namespace ConexionDatos.Model
             APELLIDOPERSONA = aPELLIDOPERSONA;
         }
 
+        public Persona(string cI_PER, string nOMBREPERSONA, string aPELLIDOPERSONA, string cORREOPERSONA, string tELEFONOPERSONA)
+        {
+            CI_PER = cI_PER;
+            NOMBREPERSONA = nOMBREPERSONA;
+            APELLIDOPERSONA = aPELLIDOPERSONA;
+            CORREOPERSONA = cORREOPERSONA;
+            TELEFONOPERSONA = tELEFONOPERSONA;
+        }
     }
 }

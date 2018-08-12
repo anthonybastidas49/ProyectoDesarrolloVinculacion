@@ -60,8 +60,18 @@ public partial class Vista_formularios_CV_Certificado : System.Web.UI.Page
         }
         else
         {
-            generatePdf();
-            
+            if(!lblNum.Text.Equals(""))
+            {
+               
+                CertificadoDAO certificado = new CertificadoDAO();
+                certificado.ingresarCertficado(Convert.ToInt16(vistaCertificaciones.SelectedRow.Cells[7].Text), Convert.ToInt16(vistaCertificaciones.SelectedRow.Cells[1].Text));
+                generatePdf();
+            }
+            else
+            {
+                Response.Write("<script language=javascript>alert('SELECCIONAR ESTUDIANTE');</script>");
+            }
+
         }
     } 
     public void generatePdf()

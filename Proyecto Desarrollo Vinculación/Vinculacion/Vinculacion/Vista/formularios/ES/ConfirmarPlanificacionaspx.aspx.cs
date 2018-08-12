@@ -12,11 +12,20 @@ public partial class Vista_formularios_ES_ConfirmarPlanificacionaspx : System.We
     int idproyecto;
     List<Planificacion> listaPlanificacion = new List<Planificacion>();
     PlanificacionDAO crudPlanificacion = new PlanificacionDAO();
+    PersonaDAO crudPersona = new PersonaDAO();
     protected void Page_Load(object sender, EventArgs e)
     {
         idEstudiante = Convert.ToInt16(Session["idPersona"]);
         lblNombre.Text = Convert.ToString(Session["nombre"]) + Convert.ToString(Session["apellido"]);
         idproyecto = Convert.ToInt16(Session["idProyecto"]);
+        if(crudPersona.extraerTutor(idEstudiante).Equals("no"))
+        {
+            lblTU.Text = "SIN ASIGNACIÓN";
+        }
+        else
+        {
+            lblTU.Text = crudPersona.extraerTutor(idEstudiante);
+        }
         if(!IsPostBack)
         {
             llenarTabla();

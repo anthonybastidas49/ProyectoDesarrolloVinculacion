@@ -31,5 +31,12 @@ namespace ConexionDatos.Model
             this.nombre = nombre;
             this.apellido = apellido;
         }
+
+        public Maestro(int idProyecto, int idPersona, string carrera)
+        {
+            this.idProyecto = idProyecto;
+            this.idPersona = idPersona;
+            this.carrera = carrera;
+        }
     }
 }

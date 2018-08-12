@@ -1,0 +1,18 @@
+﻿body {
+
+}
+.divFinal {
+    background-color: #ff6a00;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font-size: 30px;
+}
+.divM {
+    background-color: #4cff00;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font-size: 30px;
+}
+.text {
+    border-radius: 20px 20px 20px 20px;
+}

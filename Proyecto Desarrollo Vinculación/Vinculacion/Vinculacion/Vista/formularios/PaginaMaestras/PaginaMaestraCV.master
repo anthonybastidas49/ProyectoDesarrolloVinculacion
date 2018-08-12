@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <link href="../../estilos/estilosPM.css" rel="stylesheet" />
+<link href="../../estilos/General.css" rel="stylesheet" />
 <html>
     
 <head runat="server">
@@ -43,12 +44,56 @@
             text-align: center;
         }
         .auto-style13 {
-            height: 148px;
+            height: 167px;
             width: 127px;
         }
-        .auto-style14 {
-            width: 178px;
-            text-align: left;
+        .auto-style18 {
+            width: 498px;
+            margin-left: 400px;
+            text-align: center;
+            font-size: medium;
+            height: 193px;
+        }
+        .auto-style19 {
+            text-align: center;
+            width: 216px;
+            height: 193px;
+        }
+        .auto-style20 {
+            width: 216px;
+            height: 193px;
+        }
+        .auto-style21 {
+            font-size: medium;
+        }
+        .auto-style22 {
+            text-align: center;
+            height: 193px;
+            width: 194px;
+        }
+        .auto-style23 {
+            font-size: 10pt;
+            height: 37px;
+            width: 212px;
+            color: #FFFFFF;
+        }
+        .auto-style24 {
+            font-size: 10pt;
+            height: 33px;
+            width: 255px;
+        }
+        .auto-style25 {
+            font-size: 10pt;
+            width: 194px;
+            font-weight: normal;
+            color: #FFFFFF;
+        }
+        .auto-style26 {
+            color: #FFFFFF;
+        }
+        .auto-style27 {
+            text-align: center;
+            color: #FFFFFF;
         }
         </style>
 </head>
@@ -67,7 +112,9 @@
                     <asp:Image ID="Image2" runat="server" ImageAlign="NotSet" ImageUrl="~/Imagenes/logo-vinculacion.png" ToolTip="VINCULACIÓN ESPE" Height="97px" Width="134px" />
                 </td>
             </tr>
+                    
             </table>
+   
         <table id="tablaMedio" class="auto-style9">
             <tr>
                 <td id="tablaMedio1" class="auto-style6">
@@ -96,22 +143,30 @@
                     </table>
                 </td>
                 <td id="tablaMedio2">
-                    <div>
-                        <table class="auto-style13">
-                            <tr>
-                                <td class="auto-style14" >
-                                    <a href="ActualizarFormatos.aspx"><asp:Image ID="Image3" runat="server" Height="111px" ImageUrl="~/Imagenes/Formato.png" Width="138px" /></a>
+                    <div style="height:190px; cursor: auto; background-color: #006600;" class="divMenu">
+                        <hr style="border: 4px ridge #339933" />
+                        <table class="auto-style13" >
+                            <tr >
+                                <td class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                <td class="auto-style18">
+                                    <a href="ActualizarFormatos.aspx"><asp:Image ID="Image3" runat="server" Height="100px" ImageUrl="~/Imagenes/Formato.png" Width="150px" ToolTip="Actualizar Formatos" CssClass="auto-style21" /></a><br class="auto-style21" /><h3 class="auto-style23">ACTUALIZAR FORAMATOS</h3>
                                 </td>
-                                <td> 
+                                <td class="auto-style19"> 
 
-                                    <a href="../CV/RegistroDocumentación.aspx"><asp:Image ID="Image4" runat="server" Height="116px" ImageUrl="~/Imagenes/subirDocumentos.png" Width="159px" /></a>
+                                    <a href="../CV/RegistroDocumentación.aspx"><asp:Image ID="Image4" runat="server" Height="100px" ImageUrl="~/Imagenes/subirDocumentos.png" Width="150px" ToolTip="Registrar Documentación" CssClass="auto-style21" /></a><br class="auto-style21" /><h3 style="color: #006600" class="auto-style24">R<span class="auto-style26">REGISTRAR DOCUMENTACIÓN</span></h3>
                                 </td>
-                                <td>
-                                    <a href="../CV/Certificado.aspx"><asp:Image ID="Image5" runat="server" Height="122px" ImageUrl="~/Imagenes/certificado.png" Width="150px" /></a>
+                                <td class="auto-style22">
+                                    <a href="../CV/Certificado.aspx"><asp:Image ID="Image5" runat="server" Height="100px" ImageUrl="~/Imagenes/certificado.png" Width="150px" ToolTip="Emitir Certificados" CssClass="auto-style21" /></a><br class="auto-style21" /><h3 class="auto-style25"><strong>EMITIR CERTIFICADOS</strong></h3>
                                 </td>
+                                
+                               <td>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="100px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style27">SALIR</h3>
+</td>
                             </tr>
-                        </table>
+                            
+                       </table>
                     </div>
+                    <hr style="border: 4px ridge #339933; height:100%" />
                     <div>
                         <asp:ContentPlaceHolder id="contenidoPag" runat="server">
                          </asp:ContentPlaceHolder>
@@ -119,6 +174,7 @@
                     
                 </td>
             </tr>
+
         </table>
         <table id="lineaVertical"style="width:100%;height:50px">
             <tr>
@@ -131,12 +187,16 @@
                 <td id="lineaVertical3">
                     Proyecto desarrollado por estudiantes de la Universidad de las Fuerzas Armadas "ESPE"
                     © Copyright ESPE EDU. ® Todos los derechos reservados 2018
+                       Proyecto desarrollado por estudiantes de la Universidad de las Fuerzas Armadas "ESPE"
+                    © Copyright ESPE EDU. ® Todos los derechos reservados 2018
                 </td>
                 <td>
                     <a href="../indexVinculacion.aspx"><asp:Image  runat="server" ImageAlign="Left" ImageUrl="~/Imagenes/home.png" ToolTip="index" Height="65px" Width="80px" /></a>
                 </td>
             </tr>
         </table>
+        <hr style="border: 4px ridge #339933" />
+
     </form>
     <p class="auto-style7">
         &nbsp;</p>

@@ -1,0 +1,134 @@
+﻿body {
+}
+.divMenuM {
+    background-color: #3954ee;
+    font-size: 26px;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    opacity: 0.8;
+    filter: alpha(opacity=20); /* IE8 and lower */
+    zoom: 1;
+}
+.lista {
+    width: 200px;
+    border: 2px solid #7d6754;
+    border-radius: 5px;
+    padding: 3px;
+    -webkit-appearance: none;
+    background-image: url('Images/Arrowhead-Down-01.png');
+    background-position: 88px;
+    background-repeat: no-repeat;
+    text-indent: 0.01px; /*In Firefox*/
+    text-overflow: ''; /*In Firefox*/
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.wrapper-dropdown-2 .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    right: 0px;
+    /* Styles */
+    background:#3954ee;
+    transition: all 0.3s ease-out;
+    list-style: none;
+    /* Hiding */
+    opacity: 0;
+    border-radius: 20px 20px 20px 20px;
+    pointer-events: none;
+}
+.wrapper-dropdown-2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: grey transparent;
+    border-radius: 20px 20px 20px 20px;
+}
+.wrapper-dropdown-2 {
+    /* Size and position */
+    position: relative; /* Enable absolute positioning for children and pseudo elements */
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    /* Styles */
+    background: #fff;
+    border-left: 5px solid grey;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px 20px 20px 20px;
+}
+.divMenuFinal {
+    background-color: #bbb3b3;
+    font-size: 26px;
+    font-style: normal;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    opacity: 0.8;
+    filter: alpha(opacity=20); /* IE8 and lower */
+    zoom: 1;
+}
+.mGrid {
+    background-color: #3954ee;
+    margin: 5px 0 10px 0;
+    border-collapse: collapse;
+    font-size: 15pt;
+    font-style: oblique;
+    
+}
+
+    .mGrid td {
+        padding: 2px;
+        border: solid 1px #076c19;
+        color: #000000;
+    }
+
+    .mGrid th {
+        padding: 4px 2px;
+        color: #fff;
+        background: #3954ee url(grd_head.png) repeat-x top;
+        border-left: solid 1px #076c19;
+        font-size: 0.9em;
+    }
+
+    .mGrid .alt {
+        background: #076c19;
+    }
+
+    .mGrid .pgr {
+        background: #076c19;
+    }
+
+        .mGrid .pgr table {
+            margin: 5px 0;
+        }
+
+        .mGrid .pgr td {
+            border-width: 0;
+            padding: 0 6px;
+            border-left: solid 1px #666;
+            font-weight: bold;
+            color: #076c19;
+            line-height: 12px;
+        }
+
+        .mGrid .pgr a {
+            color: #666;
+            text-decoration: none;
+        }
+
+            .mGrid .pgr a:hover {
+                color: #000;
+                text-decoration: none;
+            }

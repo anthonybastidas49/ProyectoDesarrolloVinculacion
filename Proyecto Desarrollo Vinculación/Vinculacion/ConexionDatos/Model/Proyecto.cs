@@ -31,5 +31,16 @@ namespace ConexionDatos.Model
             this.MaxMaestro = maxMaestro;
             this.carrera = carrera;
         }
+
+        public Proyecto(string nomProyecto, DateTime fechaInicio, string nomComunidad, int numMaxestudin, DateTime fechaFin, int maxMaestro, string carrera)
+        {
+            this.nomProyecto = nomProyecto;
+            this.fechaInicio = fechaInicio;
+            this.nomComunidad = nomComunidad;
+            this.numMaxestudin = numMaxestudin;
+            this.fechaFin = fechaFin;
+            MaxMaestro = maxMaestro;
+            this.carrera = carrera;
+        }
     }
 }

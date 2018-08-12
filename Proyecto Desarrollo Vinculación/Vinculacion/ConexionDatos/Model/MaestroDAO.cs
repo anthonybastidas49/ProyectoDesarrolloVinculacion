@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConexionDatos.Model
 {
+    
     public class MaestroDAO
     {
         SqlConnection cnn;
@@ -14,6 +15,23 @@ namespace ConexionDatos.Model
         SqlCommand cmd = new SqlCommand();
         ConexionDB c = new ConexionDB();
         String retorno = "";
+        public void insertarDD(Maestro aux)
+        {
+            cnn = c.conectar;
+            query = "INSERT INTO MAESTRO(IDPROYECTO,IDPERSONA,CARGO,carrera)VALUES("+aux.idProyecto+","+aux.idPersona+"," +
+                "'DD','"+aux.carrera+"')";
+            cmd = new SqlCommand(query, cnn);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+        public void administrador(int idPersona)
+        {
+            cnn = c.conectar;
+            query = "INSERT INTO CATALOGOPROFESOR VALUES("+idPersona+");";
+            cmd = new SqlCommand(query, cnn);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
         public String nombreDirector(int idProyecto)
         {
             cnn = c.conectar;

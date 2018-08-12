@@ -1,9 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vista/formularios/PaginaMaestras/PaginaMaestraES.master" AutoEventWireup="true" CodeFile="visualizarCalificaciones.aspx.cs" Inherits="Vista_formularios_ES_visualizarCalificaciones" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style16 {
+            text-align: left;
+            margin-left: 200px;
+        }
+        .auto-style17 {
+            font-size: 24pt;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenidoPag" Runat="Server">
-    <div class="divTitulo"style="width=100%" >
+    <link href="../../estilos/ES.css" rel="stylesheet" />
+    <hr style="border: 4px ridge #FFFF66" />
+    <div class="divMenuM"style="width:100%" >
         <table class="auto-style36">
             <tr>
                 <td class="auto-style37" style="height:50px">
@@ -12,11 +23,19 @@
                 <td>
                     <asp:Label ID="lblNombre" runat="server" CssClass="text"></asp:Label>
                 </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+                <td>
+                    <asp:Label ID="Label1" runat="server" Text="TUTOR ACADÉMICO:     "></asp:Label><asp:Label ID="lblTU" runat="server" Text="Label"></asp:Label>
+                </td>
         </table>
         </div>
-        <div><h2>CALIFICACIONES</h2></div>
-        <div>
-            <asp:GridView ID="vistaCalificaciones" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <hr style="border: 4px ridge #FFFF66" />
+        <div class="auto-style5"><h2 class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; CALIFICACIONES</h2></div>
+        <hr style="border: 4px ridge #FFFF66" />
+            
+    <div class="auto-style16">
+            <div>
+            <asp:GridView ID="vistaCalificaciones" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="mGrid">
                 <AlternatingRowStyle BackColor="White" />
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -29,7 +48,10 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:Label ID="lblcontrol" runat="server" Text="NO CUENTA CON CALIFICACIONES" Visible="False"></asp:Label>
+            </div>
+            <strong>
+            <asp:Label ID="lblcontrol" runat="server" Text="NO CUENTA CON CALIFICACIONES" Visible="False" CssClass="auto-style17"></asp:Label>
+            </strong>
         </div>
 </asp:Content>
 

@@ -7,11 +7,22 @@ using System.Threading.Tasks;
 
 namespace ConexionDatos.Model
 {
+
     public class EstudianteDAO
     {
         SqlConnection cnn;
         ConexionDB c = new ConexionDB();
         string query;
+        public void administrador(int idpersona)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cnn = c.conectar;
+            query = "INSERT INTO CATALOGOESTUDIANTE VALUES("+idpersona+");";
+            cmd = new SqlCommand(query, cnn);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            c.desconectar();
+        }
         public int numHoras(int idPersona)
         {
             int horas=0;
@@ -33,14 +44,14 @@ namespace ConexionDatos.Model
             c.desconectar();
             return horas;
         }
-        public List<Estudiante> queryEstudiante()
+        public List<Estudiante> queryEstudiante(String carrera)
         {
             List<Estudiante> listaEstudiante = new List<Estudiante>();
             cnn = c.conectar;
             using (cnn)
             {
 
-                query = "SELECT e.IDPROYECTO,e.IDPERSONA,e.NUMHORASCUMPLIDAS,e.IDMAPERSONA,p.NOMBREPERSONA,p.APELLIDOPERSONA FROM ESTUDIANTE e, PERSONA p WHERE e.IDMAPERSONA=0 AND p.IDPERSONA=e.IDPERSONA";
+                query = "SELECT e.IDPROYECTO,e.IDPERSONA,e.NUMHORASCUMPLIDAS,e.IDMAPERSONA,p.NOMBREPERSONA,p.APELLIDOPERSONA FROM ESTUDIANTE e, PERSONA p,PROYECTO pr WHERE e.IDMAPERSONA=0 AND p.IDPERSONA=e.IDPERSONA AND e.IDPROYECTO=pr.IDPROYECTO AND pr.carrera='"+carrera+"'";
                 SqlCommand cmd = new SqlCommand(query, cnn);
                 SqlDataReader read = cmd.ExecuteReader();
                 while(read.Read())
@@ -55,6 +66,16 @@ namespace ConexionDatos.Model
             c.desconectar();
             return listaEstudiante;
 
+        }
+        public void registrarEstudiante(Estudiante aux)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cnn = c.conectar;
+            query = "INSERT INTO ESTUDIANTE VALUES("+aux.idProyecto+","+aux.idPersona+","+aux.numHorasCumplidas+","+aux.idMaPersona+")";
+            cmd = new SqlCommand(query, cnn);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            c.desconectar();
         }
         public void registrarTutorAcademico(Maestro maestro, Estudiante estudiate)
         {

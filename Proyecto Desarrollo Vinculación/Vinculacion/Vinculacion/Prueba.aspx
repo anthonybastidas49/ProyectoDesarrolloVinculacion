@@ -30,6 +30,7 @@
     <asp:Button id="cargarImagen" runat="server"
 	  Text="Cargar imágenes" OnClick="cargarImagen_Click"/>
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="DESCARGAR" />
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
     </div>
         </div>
         <div>

@@ -19,7 +19,8 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
         idMaestro = Convert.ToInt16( Session["idPersona"]);
         lblNombre.Text = Convert.ToString(Session["nombre"])+ Convert.ToString(Session["apellido"]);
         carrera = Convert.ToString(Session["carrera"]);
-        visializarPeticiones();
+        if(!IsPostBack)
+            visializarPeticiones();
     }
 
     protected void selectedIndexChange(object sender, EventArgs e)
@@ -70,7 +71,6 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
     {
         listaS = solicitud.extraerInformacion(carrera);
         listaP = persona.extraerInformación(listaS);
-        vistaSolicitud.AutoGenerateSelectButton = true;
         vistaSolicitud.DataSource = listaP;
         vistaSolicitud.DataBind();
         vistaProyecto.DataSource = listaS;

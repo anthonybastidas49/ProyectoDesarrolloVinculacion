@@ -1,0 +1,9 @@
+﻿body {
+}
+.estiloP {
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+    text-align: justify;
+    font-size: 24pt;
+}

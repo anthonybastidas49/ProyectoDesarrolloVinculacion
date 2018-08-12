@@ -44,7 +44,6 @@ public partial class Vista_formularios_VistaDirectorDepaMaestros : System.Web.UI
     {
         PersonaDAO persona = new PersonaDAO();
         listaPersonas = persona.queryDocente();
-        vistaMaestros.AutoGenerateSelectButton = true;
         vistaMaestros.DataSource = listaPersonas;
         vistaMaestros.DataBind();
 
