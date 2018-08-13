@@ -26,7 +26,8 @@ namespace ConexionDatos {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=VINCULACION;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=anrotoba.database.windows.net;Initial Catalog=VINCULACION;User ID=Ant" +
+            "hony;Password=A1723551055jr")]
         public string cadena {
             get {
                 return ((string)(this["cadena"]));
