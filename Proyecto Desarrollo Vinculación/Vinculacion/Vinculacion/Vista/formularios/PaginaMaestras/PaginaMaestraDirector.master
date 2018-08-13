@@ -75,11 +75,6 @@
             color: #FFFFFF;
             width: 134px;
         }
-        .auto-style20 {
-            text-align: center;
-            color: #FFFFFF;
-            font-size: 14pt;
-        }
         </style>
 </head>
 <body>
@@ -146,7 +141,7 @@
 
                                 </td>
                                 <td>
-<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="110px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SALIR</h3>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="120px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a>
 </td>
                             </tr>
                         </table>

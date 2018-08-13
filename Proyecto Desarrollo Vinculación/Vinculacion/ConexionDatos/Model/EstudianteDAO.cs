@@ -71,7 +71,7 @@ namespace ConexionDatos.Model
         {
             SqlCommand cmd = new SqlCommand();
             cnn = c.conectar;
-            query = "INSERT INTO ESTUDIANTE VALUES("+aux.idProyecto+","+aux.idPersona+","+aux.numHorasCumplidas+","+aux.idMaPersona+")";
+            query = "INSERT INTO SOLICITUD(IDPROYECTO,IDPERSONA)VALUES("+aux.idProyecto+","+aux.idPersona+");";
             cmd = new SqlCommand(query, cnn);
             cmd.ExecuteNonQuery();
             cnn.Close();

@@ -108,7 +108,7 @@
                                     <a href="../BF/Confirmacion.aspx"> <asp:Image ID="Image3" runat="server" Height="100px" ImageUrl="~/Imagenes/confirmar.png" Width="150px" /> </a><br /><h3>CONFIRMACIÓN</h3>
                                 </td>
                                 <td>
-<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="100px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style27">SALIR</h3>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="100px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br />
 </td>
                                 <td> 
 

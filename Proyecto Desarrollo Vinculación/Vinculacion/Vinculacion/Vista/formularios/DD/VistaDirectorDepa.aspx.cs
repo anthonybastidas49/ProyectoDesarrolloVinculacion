@@ -10,16 +10,18 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
 {
      int idMaestro;
      String carrera;
+    comunicacion envioCorreos = new comunicacion();
     SolicitudDAO solicitud = new SolicitudDAO();
     PersonaDAO persona = new PersonaDAO();
     List<Solicitud> listaS = new List<Solicitud>();
     List<Persona> listaP = new List<Persona>();
+    ProyectoDAO crudProyecto = new ProyectoDAO();
+    Proyecto enviarNombre = new Proyecto();
     protected void Page_Load(object sender, EventArgs e)
     {
         idMaestro = Convert.ToInt16( Session["idPersona"]);
         lblNombre.Text = Convert.ToString(Session["nombre"])+ Convert.ToString(Session["apellido"]);
         carrera = Convert.ToString(Session["carrera"]);
-        if(!IsPostBack)
             visializarPeticiones();
     }
 
@@ -34,7 +36,7 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
 
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
-        if(lblid.Text != "")
+            if(lblid.Text != "" && lblProyecto.Text!="")
         {
             Persona aux = new Persona();
             Solicitud sol = new Solicitud();
@@ -56,9 +58,14 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
                 }
                 else { };
             }
+            
+            enviarNombre = crudProyecto.nomProyecto(Convert.ToInt16(lblProyecto.Text));
+            envioCorreos.enviarMensaje(vistaSolicitud.SelectedRow.Cells[5].Text,enviarNombre.nomProyecto);
             solicitud.aprobarSolicitud(aux, sol);
+            Response.Write("<script language=javascript>alert('SOLICITUD APROBADA');</script>");
             visializarPeticiones();
             limpiarlabel();
+
         }
         else
         {
@@ -83,6 +90,7 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
         lblcar.Text = "";
         lblnom.Text = "";
         lblape.Text = "";
+        lblProyecto.Text = "";
     }
     protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
     {
@@ -105,5 +113,10 @@ public partial class Vista_VistaDirectorDepa : System.Web.UI.Page
             Response.Write("<script language=javascript>alert('No se selecciono ninguna solicitud');</script>");
         }
             
+    }
+
+    protected void vistaProyecto_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        lblProyecto.Text = vistaProyecto.SelectedRow.Cells[2].Text;
     }
 }

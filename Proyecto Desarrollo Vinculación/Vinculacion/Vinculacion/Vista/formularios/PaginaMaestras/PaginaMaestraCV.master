@@ -94,6 +94,7 @@
         .auto-style27 {
             text-align: center;
             color: #FFFFFF;
+            font-size: 10pt;
         }
         </style>
 </head>
@@ -160,7 +161,7 @@
                                 </td>
                                 
                                <td>
-<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="100px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br /><h3 class="auto-style27">SALIR</h3>
+<a href="../loginVinculacion.aspx"><asp:Image ID="Image6" runat="server" Height="100px" ToolTip="CERRAR" Width="150px" ImageUrl="~/Imagenes/salir.png" /></a><br />
 </td>
                             </tr>
                             

@@ -105,7 +105,7 @@
                     
                 </td>
                 <td>
-                    <asp:GridView ID="vistaProyecto" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="16px" Width="30%" CssClass="mGrid">
+                    <asp:GridView ID="vistaProyecto" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="16px" Width="30%" CssClass="mGrid" OnSelectedIndexChanged="vistaProyecto_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ButtonType="Image" SelectImageUrl="~/Imagenes/selecciona.png" ShowSelectButton="True">
@@ -202,6 +202,18 @@
                 <td>
 
                     <asp:Label ID="lblcar" runat="server" CssClass="auto-style32"></asp:Label>
+
+                </td>
+                <td>
+
+                    <strong>
+                    <asp:Label ID="Label10" runat="server" Text="IDPROYECTO"></asp:Label>
+                    </strong>
+
+                </td>
+                <td>
+
+                    <asp:Label ID="lblProyecto" runat="server" ></asp:Label>
 
                 </td>
             </tr>

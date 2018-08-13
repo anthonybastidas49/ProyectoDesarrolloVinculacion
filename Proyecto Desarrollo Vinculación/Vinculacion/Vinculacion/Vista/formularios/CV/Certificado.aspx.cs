@@ -77,7 +77,7 @@ public partial class Vista_formularios_CV_Certificado : System.Web.UI.Page
     public void generatePdf()
     {
         Document pdfDoc = new Document(PageSize.A4, 10, 10, 10, 10);
-        Proyecto proyecto = crudProyecto.nomProyecto(Convert.ToInt16(vistaCertificaciones.SelectedRow.Cells[1].Text));
+        Proyecto proyecto = crudProyecto.nomProyecto(Convert.ToInt16(vistaCertificaciones.SelectedRow.Cells[7].Text));
         String nombreProyecto =proyecto.nomProyecto;
         try
         {
